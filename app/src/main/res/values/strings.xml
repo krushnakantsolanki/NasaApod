@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">NasaApod</string>
+    <string name="nasaapod">Nasa picture of the day</string>
+
 </resources>
