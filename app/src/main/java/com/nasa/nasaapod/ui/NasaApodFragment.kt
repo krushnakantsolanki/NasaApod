@@ -51,15 +51,18 @@ class NasaApodFragment : Fragment() {
 
     private fun bindView(nasaApodEntityList: List<NasaApodEntity>) {
         if (!nasaApodEntityList.isEmpty()) {
+            Timber.e("List is %s",nasaApodEntityList)
+            Timber.e("Size is %d",nasaApodEntityList.size)
             val nasaApodEntity = nasaApodEntityList.get(0);
-            Timber.e("Date is " + nasaApodEntity.date)
+            Timber.i("Date is %s" , Utils.convertDateFormat(nasaApodEntity.date))
             nasaApodEntity.apply {
                 bindImageFromUrl(binding.apodImageview, nasaApodEntity.url)
                 binding.titleTv.text = nasaApodEntity.title
                 binding.explainTv.text = nasaApodEntity.explanation
             }
 
-            if (nasaApodEntity.date?.equals(Utils.getCurrentDate(Calendar.getInstance())) != true && !Utils.isNetworkAvailable(
+            Timber.i("Current Date is %s" , Utils.getCurrentDate(Calendar.getInstance()))
+            if (Utils.convertDateFormat(nasaApodEntity.date)?.equals(Utils.getCurrentDate(Calendar.getInstance())) != true && !Utils.isNetworkAvailable(
                     binding.titleTv.context
                 )
             ) {

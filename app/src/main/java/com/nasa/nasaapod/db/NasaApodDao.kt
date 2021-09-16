@@ -7,7 +7,7 @@ import java.util.*
 @Dao
 interface NasaApodDao {
 
-    @Query("SELECT * FROM nasaapod")
+    @Query("SELECT * FROM nasaapod ORDER BY date DESC")
     fun getAllPictures(): LiveData<List<NasaApodEntity>>
 
     @Query("SELECT * FROM nasaapod WHERE date = :date")
