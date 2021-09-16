@@ -17,7 +17,5 @@ The APOD image loads fully on the screen Then: The user should be able to see th
 image without distortion or clipping
 
 Library used
-Daggar,Viewmodel,Retrofit,Room,Glide
+Daggar,Viewmodel,Retrofit,Room,Glide,Coroutine
 Architecture: MVVM
-
-Planning to add Coroutine once I get some time
