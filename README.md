@@ -15,3 +15,7 @@ that was last seen by the user
 4. The NASA APOD API is up (working) AND the phone is connected to the internet When:
 The APOD image loads fully on the screen Then: The user should be able to see the complete
 image without distortion or clipping
+
+Library used
+Daggar,Viewmodel,Retrofit,Room,Glide
+Architecture: MVVM
