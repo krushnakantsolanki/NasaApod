@@ -2,12 +2,14 @@ package com.nasa.nasaapod
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.nasa.nasaapod.databinding.ActivityMainBinding
 import com.nasa.nasaapod.ui.NasaApodFragment
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(ActivityMainBinding.inflate(layoutInflater).root)
         if (savedInstanceState == null) {
             val fm = supportFragmentManager
             val ft = fm.beginTransaction()

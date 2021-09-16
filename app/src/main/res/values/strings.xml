@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">NasaApod</string>
     <string name="nasaapod">Nasa picture of the day</string>
+    <string name="no_internet">Internet is not available</string>
+    <string name="last_cache_image">We are not connected to the internet, showing you the last image we have.</string>
 
 </resources>

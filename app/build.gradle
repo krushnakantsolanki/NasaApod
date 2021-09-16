@@ -7,6 +7,9 @@ plugins {
 
 android {
     compileSdk rootProject.compileSdkVersion
+    buildFeatures {
+        viewBinding = true
+    }
     dataBinding {
         enabled = true
     }
@@ -77,6 +80,8 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$rootProject.kotlinVersion"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.coroutinesVersion"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$rootProject.coroutinesVersion"
+
+    implementation "androidx.fragment:fragment-ktx:$rootProject.fragmentVersion"
 
     testImplementation 'junit:junit:4.+'
 

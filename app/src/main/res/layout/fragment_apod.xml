@@ -14,6 +14,7 @@
   ~ limitations under the License.
   ~
   -->
+<layout>
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -21,10 +22,9 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/apod_iv"
+        android:id="@+id/apod_imageview"
         android:layout_width="0dp"
         android:layout_height="300dp"
-        android:adjustViewBounds="true"
         android:contentDescription="@string/nasaapod"
         android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,22 +38,23 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/apod_iv">
+        app:layout_constraintTop_toBottomOf="@+id/apod_imageview">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/date_tv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dimen_16dp"
-                android:layout_marginTop="@dimen/dimen_16dp"
-                android:layout_marginEnd="@dimen/dimen_16dp"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/dimen_16sp" />
+<!--            <TextView-->
+<!--                android:id="@+id/date_tv"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="@dimen/dimen_16dp"-->
+<!--                android:layout_marginTop="@dimen/dimen_16dp"-->
+<!--                android:layout_marginEnd="@dimen/dimen_16dp"-->
+<!--                android:textColor="@android:color/white"-->
+<!--                android:textSize="@dimen/dimen_16sp"-->
+<!--                android:text="@{apodentitiy.date}"/>-->
 
             <TextView
                 android:id="@+id/title_tv"
@@ -62,18 +63,18 @@
                 android:layout_marginStart="@dimen/dimen_16dp"
                 android:layout_marginTop="@dimen/dimen_16dp"
                 android:layout_marginEnd="@dimen/dimen_16dp"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:textSize="@dimen/dimen_16sp" />
 
-            <TextView
-                android:id="@+id/copyright_tv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dimen_16dp"
-                android:layout_marginTop="@dimen/dimen_16dp"
-                android:layout_marginEnd="@dimen/dimen_16dp"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/dimen_16sp" />
+<!--            <TextView-->
+<!--                android:id="@+id/copyright_tv"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="@dimen/dimen_16dp"-->
+<!--                android:layout_marginTop="@dimen/dimen_16dp"-->
+<!--                android:layout_marginEnd="@dimen/dimen_16dp"-->
+<!--                android:textColor="@android:color/white"-->
+<!--                android:textSize="@dimen/dimen_16sp" />-->
 
             <TextView
                 android:id="@+id/explain_tv"
@@ -83,8 +84,10 @@
                 android:layout_marginTop="@dimen/dimen_16dp"
                 android:layout_marginEnd="@dimen/dimen_16dp"
                 android:layout_marginBottom="@dimen/dimen_16dp"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/dimen_16sp" />
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/dimen_16sp"
+                />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
