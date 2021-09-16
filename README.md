@@ -19,3 +19,5 @@ image without distortion or clipping
 Library used
 Daggar,Viewmodel,Retrofit,Room,Glide
 Architecture: MVVM
+
+Planning to add Coroutine once I get some time
