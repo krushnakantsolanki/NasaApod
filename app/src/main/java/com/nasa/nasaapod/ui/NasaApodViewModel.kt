@@ -9,14 +9,5 @@ import javax.inject.Singleton
 class NasaApodViewModel @Inject constructor(private val nasaApodRepository: NasaApodRepository) :
     ViewModel() {
 
-//    val nasaApodPicture = nasaApodRepository.getPicturebyDate()
-    val nasaApodPicture = nasaApodRepository.getAllPictures()
-
     val nasaApod by lazy { nasaApodRepository.observeApod() }
-
-//    fun fetchPictureByDate(date: String) = nasaApodRepository.fetchTodaysPicture()
-//
-//    lateinit var date: Date
-//    val legoSet by lazy { nasaApodRepository.observeSet(date) }
-
-}
+    }
